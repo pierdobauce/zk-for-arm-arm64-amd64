@@ -90,9 +90,9 @@ jobs:
            #docker push pierdobauce.ddns.net:5000/extract
  
       - run:
-	 name: create zk images and push them
-	 command: |
-	    docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -f Dockerfile --push -t sarmand.ddns.net:5000/zk36:3.6 .
+         name: create zk images and push them
+         command: |
+            docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -f Dockerfile --push -t sarmand.ddns.net:5000/zk36:3.6 .
 
 
             
