@@ -69,7 +69,7 @@ jobs:
          name: Configuring docker daemon to use insecure registries
          command: |
            json=`mktemp`
-           echo '{ "insecure-registries": [ "pierdobauce.ddns.net:5000" ] }' > ${json}
+           echo '{ "insecure-registries": [ "sarmand.ddns.net:5000" ] }' > ${json}
            sudo mv ${json} /etc/docker/daemon.json
            sudo service docker restart
            echo "Configured Docker daemon with insecure-registry"
@@ -85,7 +85,7 @@ jobs:
          name: Connecting to my own insecure registry
          command: |
            #docker image list
-           docker login -u pierdo -p pierd0 pierdobauce.ddns.net:5000
+           docker login -u pierdo -p pierd0 sarmand.ddns.net:5000
            #docker image tag extract pierdobauce.ddns.net:5000/extract
            #docker push pierdobauce.ddns.net:5000/extract
  
