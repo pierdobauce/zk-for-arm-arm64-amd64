@@ -1,0 +1,3 @@
+server.1=zk36-host-1:2888:3888
+server.2=zk36-host-2:2888:3888
+server.3=zk36-host-3:2888:3888

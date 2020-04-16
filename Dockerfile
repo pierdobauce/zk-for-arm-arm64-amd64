@@ -80,5 +80,6 @@ ENV PATH=$PATH:/$DISTRO_NAME/bin \
     ZOOCFGDIR=$ZOO_CONF_DIR
 
 COPY docker-entrypoint.sh /
+COPY zoo.cnf "$ZOO_CONF_DIR"
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["zkServer.sh", "start-foreground"]
